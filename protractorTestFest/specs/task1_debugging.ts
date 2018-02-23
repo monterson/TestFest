@@ -16,26 +16,22 @@ describe('Troll search page', () => {
 
     });
 
-    //Dwa wiersze o tej samej nazwie
     it('should find Troll using Name', () => {
         pages.searchTrollPage.searchTroll("Trol1");
         expect(pages.searchTrollPage.getNumberOfVisibleRows()).toEqual(1);
     });
 
-    //Nie ma takiego wyniku
     it('should find Troll using Email', () => {
         pages.searchTrollPage.searchTroll("2@2.pl");
         expect(pages.searchTrollPage.getNumberOfVisibleRows()).toEqual(1);
     });
 
-    //Zly lokator do kolumny inteligencja
     it('should find Troll using Intelligence', () => {
         pages.searchTrollPage.searchTroll("Medium");
         let columnNo = 4;
         expect(pages.searchTrollPage.getValuesFromVisibleRows(columnNo)).toContain("Medium");
     });
 
-    //Wyskakujacy popup + nie ma wynikow
     it('should find Troll using Target', () => {
         pages.searchTrollPage.searchTrollUsingTarget("abcd");
         expect(pages.searchTrollPage.getNumberOfVisibleRows()).toEqual(1);
