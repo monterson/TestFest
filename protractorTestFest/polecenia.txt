@@ -1,0 +1,5 @@
+npm install
+npm run webdriver-manager
+npm run test1
+...
+npm debug
