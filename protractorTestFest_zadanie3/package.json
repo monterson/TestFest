@@ -1,0 +1,25 @@
+{
+  "name": "protractortestfest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "task1": "node ./node_modules/protractor/bin/protractor ./configFiles/ptor_t1.conf.ts",
+    "task2": "node ./node_modules/protractor/bin/protractor ./configFiles/ptor_t2.conf.ts",
+    "task3": "node ./node_modules/protractor/bin/protractor ./configFiles/ptor_t3.conf.ts",
+    "task4": "node ./node_modules/protractor/bin/protractor ./configFiles/ptor_t4.conf.ts",
+    "task5": "node ./node_modules/protractor/bin/protractor ./configFiles/ptor_t5.conf.ts",
+    "webdriver-manager": "webdriver-manager update",
+    "debug": "node --inspect-brk ./node_modules/protractor/bin/protractor ./configFiles/ptor_t3.conf.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasminewd2": "^2.0.3",
+    "jasmine-spec-reporter": "^4.2.1",
+    "protractor": "^5.3.0",
+    "protractor-jasmine2-screenshot-reporter": "^0.5.0",
+    "typescript": "^2.7.2",
+    "ts-node": "^4.1.0"
+  }
+}
